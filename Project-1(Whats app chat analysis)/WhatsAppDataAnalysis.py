@@ -140,6 +140,7 @@ import json
 # 	print(df_user_1)
 # 	print(df_user_2)
 
+
 conf_file_path = str(os.getcwd())+'\\Config.json'
 
 def get_file_path(conf_path):
@@ -147,10 +148,6 @@ def get_file_path(conf_path):
 	with open(conf_path, 'r') as fo:
 		config_dict = json.loads(fo.read())
 	return config_dict
-
-
-
-
 
 def DataExtractionModule():
 	try:
@@ -194,8 +191,6 @@ def DataExtractionModule():
 		for message in range(len(message_data)):
 			message_data[message]=re.sub(r'.*:', ':',str(message_data[message])).replace(':','').replace('\')','')
 		
-		# df=df.drop(df.index[4932])
-		# df=df.drop(df.index[4938])
 		df=df.drop('Message',axis=1)
 		
 		# adding the modified message data
