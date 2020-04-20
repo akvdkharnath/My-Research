@@ -26,8 +26,17 @@ dataframe = pd.DataFrame(data = data,columns = boston.feature_names)
 
 dataframe['price'] = boston.target
 
+# data analysis
 print("Data set is:")
 print(dataframe.head())
 
 print("Data description: ")
 print(dataframe.describe())
+
+
+print("Data Info: ")
+print(dataframe.info())
+
+
+print("Null Exist or not :")
+print(dataframe.isnull())
