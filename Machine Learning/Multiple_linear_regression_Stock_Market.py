@@ -10,8 +10,8 @@ def main():
 	df = DataFrame(Stock_Market,columns=['Year','Month','Interest_Rate','Unemployment_Rate','Stock_Index_Price'])
 	print(df)
 	#plot_estimation(df)        # step 1
-	final_answer_sklearn(df)   # with sklearn        step 2
-	#final_answer_statsmodels(df) # with statsmodels  step 2
+	# final_answer_sklearn(df)   # with sklearn        step 2
+	final_answer_statsmodels(df) # with statsmodels  step 2
 
 def plot_estimation(df):
 	# relation of Y1 and X1
